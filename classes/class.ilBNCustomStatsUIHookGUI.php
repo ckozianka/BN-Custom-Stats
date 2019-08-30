@@ -48,7 +48,7 @@ class ilBNCustomStatsUIHookGUI extends ilUIHookPluginGUI
 		// here. So you need to use general GET/POST information
 		// like $_GET["baseClass"], $ilCtrl->getCmdClass/getCmd
 		// to determine the context.
-		if ($_GET["cmdClass"]=="ilobjusertrackinggui" && $a_part == "tabs")
+		if (($_GET["cmdClass"]=="ilobjusertrackinggui" or $_GET["cmdClass"]=="illpobjectstatisticsgui" or $_GET["cmdClass"]=="ilsessionstatisticsgui") && $a_part == "tabs")
 		{
 			// $a_par["tabs"] is ilTabsGUI object
  			
