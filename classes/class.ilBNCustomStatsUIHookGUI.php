@@ -41,19 +41,20 @@ class ilBNCustomStatsUIHookGUI extends ilUIHookPluginGUI
 	 */
 	function modifyGUI($a_comp, $a_part, $a_par = array())
 	{
-		// currently only implemented for $ilTabsGUI
- 
-		// tabs hook
-		// note that you currently do not get information in $a_comp
-		// here. So you need to use general GET/POST information
-		// like $_GET["baseClass"], $ilCtrl->getCmdClass/getCmd
-		// to determine the context.
-		if (($_GET["cmdClass"]=="ilobjusertrackinggui" or $_GET["cmdClass"]=="illpobjectstatisticsgui" or $_GET["cmdClass"]=="ilsessionstatisticsgui") && $a_part == "tabs")
+            global $ilCtrl, $ilTabs;
+            
+            // currently only implemented for $ilTabsGUI
+            // tabs hook
+            // note that you currently do not get information in $a_comp
+            // here. So you need to use general GET/POST information
+            // like $_GET["baseClass"], $ilCtrl->getCmdClass/getCmd
+            // to determine the context.
+            if (($_GET["cmdClass"]=="ilobjusertrackinggui" or $_GET["cmdClass"]=="illpobjectstatisticsgui" or $_GET["cmdClass"]=="ilsessionstatisticsgui") && $a_part == "tabs")
 		{
-			// $a_par["tabs"] is ilTabsGUI object
- 			
-			// add a tab (always)
-			$a_par["tabs"]->addTab("test", "Bonn Custom Statistics", "stest");
+                    $link = $ilCtrl->getLinkTargetByClass(array('ilUIPluginRouterGUI', 'ilBNCustomStatsPageGUI'));
+                    // $a_par["tabs"] is ilTabsGUI object
+                    // add a tab (always)
+                    $a_par["tabs"]->addTab("test", "Bonn Custom Statistics", $link);
 		}
 	}
  
