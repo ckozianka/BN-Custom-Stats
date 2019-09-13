@@ -6,8 +6,16 @@
 
 class ilBNCustomStatsPageGUI
 {
+    function __construct() 
+    {
+        global $ilCtrl, $tpl;
+        $this->ctrl = $ilCtrl;
+        $this->tpl = $tpl;
+    }
     function executeCommand ()
     {
-        echo "Hallo";
+        $this->tpl->getStandardTemplate();
+        $this->tpl->setContent("Hallo Welt!");
+        $this->tpl->show();
     }
 }
