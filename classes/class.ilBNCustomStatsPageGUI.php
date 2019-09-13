@@ -12,14 +12,26 @@ class ilBNCustomStatsPageGUI
         $this->ctrl = $ilCtrl;
         $this->tpl = $tpl;
     }
+    
     function executeCommand ()
     {
         $this->index();
     }
+    
     function index()
     {
         $this->tpl->getStandardTemplate();
         $this->tpl->setContent("Hallo Welt!");
         $this->tpl->show();
+    }
+    
+    function initStatsForm()
+    {
+        
+    }
+    
+    function fillStatsForm()
+    {
+        
     }
 }
