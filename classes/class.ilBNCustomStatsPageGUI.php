@@ -14,9 +14,6 @@ class ilBNCustomStatsPageGUI
     }
     function executeCommand ()
     {
-        /*$this->tpl->getStandardTemplate();
-        $this->tpl->setContent("Hallo Welt!");
-        $this->tpl->show();*/
         $this->index();
     }
     function index()
