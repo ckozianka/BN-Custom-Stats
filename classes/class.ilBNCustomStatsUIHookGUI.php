@@ -54,7 +54,7 @@ class ilBNCustomStatsUIHookGUI extends ilUIHookPluginGUI
                     $link = $ilCtrl->getLinkTargetByClass(array('ilUIPluginRouterGUI', 'ilBNCustomStatsPageGUI'));
                     // $a_par["tabs"] is ilTabsGUI object
                     // add a tab (always)
-                    $a_par["tabs"]->addTab("test", "Bonn Custom Statistics", $link);
+                    $a_par["tabs"]->addTab("test", "eCampus-Statistik", $link);
 		}
 	}
  
