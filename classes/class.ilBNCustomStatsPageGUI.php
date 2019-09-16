@@ -6,11 +6,13 @@
 
 class ilBNCustomStatsPageGUI
 {
+    
     function __construct() 
     {
         global $ilCtrl, $tpl;
         $this->ctrl = $ilCtrl;
         $this->tpl = $tpl;
+        $this->plugin = ilPlugin::getPluginObject(IL_COMP_SERVICE, 'UIComponent', 'uihk', 'BNCustomStats');
     }
     
     function executeCommand ()
@@ -22,6 +24,8 @@ class ilBNCustomStatsPageGUI
     {
         $this->tpl->getStandardTemplate();
         $this->tpl->setTitle("eCampus-Statistik");
+        $title_image = $this->plugin->getImagePath("ecampus_logo.svg");
+        $this->tpl->setTitleIcon($title_image);
         $this->tpl->setDescription("Spezielle Auswertungen für das eCampus-Team");
         $this->tpl->setContent("Hallo Welt!");
         $this->tpl->show();
