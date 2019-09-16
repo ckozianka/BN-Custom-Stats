@@ -9,8 +9,8 @@ class ilBNCustomStatsPageGUI
     
     function __construct() 
     {
-        global $ilCtrl, $tpl;
-        $this->ctrl = $ilCtrl;
+        global /*$ilCtrl,*/ $tpl;
+        //$this->ctrl = $ilCtrl;
         $this->tpl = $tpl;
         $this->plugin = ilPlugin::getPluginObject(IL_COMP_SERVICE, 'UIComponent', 'uihk', 'BNCustomStats');
     }
