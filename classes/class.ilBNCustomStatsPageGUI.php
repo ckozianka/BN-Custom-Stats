@@ -21,6 +21,8 @@ class ilBNCustomStatsPageGUI
     function index()
     {
         $this->tpl->getStandardTemplate();
+        $this->tpl->setTitle("eCampus-Statistik");
+        $this->tpl->setDescription("Spezielle Auswertungen für das eCampus-Team");
         $this->tpl->setContent("Hallo Welt!");
         $this->tpl->show();
     }
