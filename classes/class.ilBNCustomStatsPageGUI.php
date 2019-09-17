@@ -47,8 +47,10 @@ class ilBNCustomStatsPageGUI
         $this->tpl->setDescription("Spezielle Auswertungen für das eCampus-Team");
         
         //Tabs
-        //$this->tabs->addTab("test", "eCampus-Statistik", $this->ctrl->getLinkTargetByClass(array('ilUIPluginRouterGUI', 'ilBNCustomStatsPageGUI')));
-        //$this->tabs->activateTab("test");
+        $this->tabs->addTab("settings", "Settings", $this->ctrl->getLinkTargetByClass(array('ilAdministrationGUI', 'ilObjUserTrackingGUI')));
+        $this->tabs->activateTab("settings");
+        $this->tabs->addTab("ecampus-statistik", "eCampus-Statistik", $this->ctrl->getLinkTargetByClass(array('ilUIPluginRouterGUI', 'ilBNCustomStatsPageGUI')));
+        $this->tabs->activateTab("ecampus-statistik");
         
         //Set output to main content
         $this->tpl->setContent("Hallo Welt!");
