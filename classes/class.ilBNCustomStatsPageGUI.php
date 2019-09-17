@@ -2,7 +2,7 @@
 
  /*
   *  @ilCtrl_isCalledBy ilBNCustomStatsPageGUI: ilUIPluginRouterGUI
-  *  @ilCtrl_Calls ilBNCustomStatsPageGUI: ilObjUserTrackingGUI, ilObjSystemFolderGui
+  *  @ilCtrl_Calls ilBNCustomStatsPageGUI: ilObjUserTrackingGUI, ilObjSystemFolderGui, ilSessionStatisticsGUI
   */
 
 class ilBNCustomStatsPageGUI
@@ -49,6 +49,8 @@ class ilBNCustomStatsPageGUI
         //Tabs
         $this->tabs->addTab("settings", "Settings", $this->ctrl->getLinkTargetByClass(array('ilAdministrationGUI', 'ilObjUserTrackingGUI')));
         $this->tabs->activateTab("settings");
+        //$this->tabs->addTab("session_statistics", "SessionStatistics", $this->ctrl->getLinkTargetByClass(array('ilAdministrationGUI', 'ilSessionStatisticsGUI')));
+        //$this->tabs->activateTab("session_statistics");
         $this->tabs->addTab("ecampus-statistik", "eCampus-Statistik", $this->ctrl->getLinkTargetByClass(array('ilUIPluginRouterGUI', 'ilBNCustomStatsPageGUI')));
         $this->tabs->activateTab("ecampus-statistik");
         
